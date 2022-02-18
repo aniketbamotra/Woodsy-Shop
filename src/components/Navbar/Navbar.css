@@ -1,0 +1,64 @@
+.nav-container{
+    display: block;
+    width: 100vw;
+    border-bottom: 1px solid;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-container{
+    cursor: pointer;
+}
+.cart-icon-container{
+    margin-right: 4rem;
+    cursor: pointer;
+}
+.cart-badge{
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(var(--accent-color));
+    color: rgb(var(--light-color));
+    font-family: var(--sans);
+    font-weight: 300;
+    border-radius: 50px;
+    display: grid;
+    place-content: center;
+}
+.logo-container{
+    width: 5rem;
+    height: 5rem;
+    background-image: url(/public/asserts/logo/textured.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.slide-in-menu{
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 25vh;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .3s ease-in;
+    background-image: url(/public/asserts/media/bg-img.png);
+    background-size: cover;
+}
+.slide-in-menu h3{
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 7ch;
+    cursor: pointer;
+}
+.slide-in-menu-open{
+    transform: translateY(45vh) !important;
+}
+.slide-in-menu-close{
+    transform: translateY(-45vh);
+}
+
