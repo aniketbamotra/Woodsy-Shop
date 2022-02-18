@@ -65,6 +65,7 @@ const Home = () => {
         </div>
         <img src={require('../../asserts/media/spotlight.png')} alt="" />
       </div>
+      Aniket
     </main>
   )
 }
