@@ -1,0 +1,15 @@
+.grid-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 4;
+}
+.grid-wrap img{
+    width: 663px;
+    height: 663px;
+}
+.grid-wrap .product-name, .grid-wrap .product-price{
+    width: auto;
+}
+.grid-wrap .product-price{
+    float: right;
+}
