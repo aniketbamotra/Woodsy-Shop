@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import FeaturedProduct from '../../components/FeaturedProducts/FeaturedProduct';
-// import Navbar from '../../components/Navbar/Navbar'
+import TopPicks from '../../components/TopPicks/TopPicks';
 import './Home.css'
 
 const Home = () => {
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
         <img src={require('../../asserts/media/spotlight.png')} alt="" />
       </div>
-      Aniket
+      <TopPicks />
     </main>
   )
 }

@@ -10,7 +10,7 @@ const Navbar = () => {
     setActive(!isActive);
   };
   return (
-    <main>
+    <div>
       <div className="nav-container">
       <div className="menu-container" onClick={ToggleClass}>
         <svg width="66" height="18" viewBox="0 0 66 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,7 @@ const Navbar = () => {
       <h3 className="menu-link">About</h3>
       <h3 className="menu-link">Our Products</h3>
     </div>
-    </main>
+    </div>
   )
 }
 

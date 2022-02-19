@@ -8,15 +8,17 @@
     --light-color: 238, 238, 238;
 
 }
-body{
-    margin: 0;
-    padding: 0;
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 #bg-img{
-    width: 100vw;
-    height: 100vh;
+    min-width: 100%;
+    height: 100%;
     background-image: url(/public/asserts/media/bg-img.png);
     position: fixed;
     z-index: -100;
