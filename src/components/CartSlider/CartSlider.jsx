@@ -5,9 +5,9 @@ import { Remove } from '@material-ui/icons'
 import { useState } from 'react'
 import './CartSlider.css'
 
-const CartSlider = () => {
+const CartSlider = (props) => {
   return (
-    <div className="cart">
+    <div className={`cart ${props.isCartActive && "open-cart"}`}>
         <p className="cart-sect-title">Order Summary</p>
         <div className="cart-items-wrap">
             <div className="cart-item">

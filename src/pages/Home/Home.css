@@ -98,6 +98,7 @@
     background-size: cover;
     display: grid;
     place-content: center;
+    place-items: center;
 }
 .intro-text{
     color: rgb(var(--light-color));
@@ -116,7 +117,6 @@
     font-family: var(--sans);
     font-size: 3.5ch;
     font-weight: 600;
-    justify-self: center;
     position: relative;
     z-index: 5;
     cursor: pointer;

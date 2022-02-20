@@ -7,7 +7,6 @@ import './SingleProd.css'
 const SingleProd = () => {
   return (
       <div>
-        <Navbar />
         <p className="bread-crum-container">Home/Shop/Category/Product1</p>
         <div className="prod-wraper">
             <div className="imgs-container">

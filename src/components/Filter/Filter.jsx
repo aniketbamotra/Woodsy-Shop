@@ -1,28 +1,53 @@
-import React from 'react'
-import './Filter.css'
+import React from "react";
+import "./Filter.css";
 
-const Filter = () => {
+const categories = [
+  { label: "Decor", value: "decor" },
+  { label: "Furniture", value: "furniture" },
+  { label: "Storage", value: "storage" },
+  { label: "Wearables", value: "wearables" },
+];
+
+const sortBy = [
+  { label: "Best Sellers", value: "best-sellers" },
+  { label: "Price: Low - High", value: "price-asc" },
+  { label: "Price: High - Low", value: "price-desc" },
+  { label: "Oldest to Newest", value: "oldest" },
+  { label: "Newest to Oldest", value: "newest" },
+];
+
+const Filter = ({ setFilter, setSort }) => {
+
   return (
-    <div className='filter-wrap'>
+    <div className="filter-wrap">
       <div className="flt-sticky-container">
+        <h4 className="filter-title">Categories</h4>
         <ul className="filter">
-              <h4 className="filter-title">Categories</h4>
-              <li className="filter-ele">Decor</li>
-              <li className="filter-ele">Furnicher</li>
-              <li className="filter-ele">Storage</li>
-              <li className="filter-ele">Wearable</li>
-          </ul>
-          <ul className="filter">
-              <h4 className="filter-title">Sort By</h4>
-              <li className="filter-ele">Best Selling</li>
-              <li className="filter-ele">Price: Low - High</li>
-              <li className="filter-ele">Price: High - Low</li>
-              <li className="filter-ele">Oldest to Newest</li>
-              <li className="filter-ele">Newest to Oldest</li>
-          </ul>
+          {categories.map((category) => (
+            <li
+              key={category.value}
+              className="filter-ele"
+              onClick={() => setFilter(category.value)}
+            >
+              {category.label}
+            </li>
+          ))}
+        </ul>
+        <h4 className="filter-title">Sort By</h4>
+        <ul className="filter">
+          {sortBy.map((category) => (
+            <li
+              key={category.value}
+              className="filter-ele"
+              onClick={() => setSort(category.value)}
+            >
+              {category.label}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;
