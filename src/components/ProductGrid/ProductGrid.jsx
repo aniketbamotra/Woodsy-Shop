@@ -2,10 +2,24 @@ import React, { useState, useEffect } from "react";
 import Product from "../Product/Product";
 import "./ProductGrid.css";
 import { AllProd } from "../../products";
+import axios from "axios";
 
 const ProductGrid = ({ filter, sort }) => {
-  const [products, setProducts] = useState(AllProd);
+
+  const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get("http://localhost:8000/api/products");
+        setProducts(res.data);
+        // console.log(res)
+      } catch (err) {}
+    };
+    getProducts()
+  },[]);
+  
 
   useEffect(() => {
     if (filter === "all") {
@@ -15,7 +29,7 @@ const ProductGrid = ({ filter, sort }) => {
     setFilteredProducts(
       products.filter((product) => product.category === filter)
     );
-  }, [filter]);
+  }, [filter, products]);
 
   useEffect(() => {
     if (sort === "best-sellers") {
