@@ -14,7 +14,7 @@ const ProductGrid = ({ filter, sort }) => {
       try {
         const res = await axios.get("http://localhost:8000/api/products");
         setProducts(res.data);
-        // console.log(res)
+        console.log(res);
       } catch (err) {}
     };
     getProducts()

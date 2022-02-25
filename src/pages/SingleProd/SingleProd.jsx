@@ -1,26 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProduct'
 import './SingleProd.css'
+import { useLocation } from 'react-router-dom';
+import { publicRequest } from '../../requestMethod'
+import axios from 'axios'
 
 const SingleProd = () => {
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        const getProduct = async ()=>{
+            try {
+                const res = await publicRequest.get("/products/"+id);
+                setProduct(res.data)
+                console.log(res);
+                
+            } catch (error) {}
+        };
+        getProduct()
+    },[id]);
+    
+
   return (
       <div>
         <p className="bread-crum-container">Home/Shop/Category/Product1</p>
         <div className="prod-wraper">
             <div className="imgs-container">
-                <img src={require('../../asserts/media/scatered-img (1).jpg')} alt="" />
+                <img src={product.image} />
                 <img src={require('../../asserts/media/scatered-img (2).jpg')} alt="" />
                 <img src={require('../../asserts/media/scatered-img (3).jpg')} alt="" />
                 <img src={require('../../asserts/media/scatered-img (4).jpg')} alt="" />
             </div>
             <div className="prod-text-area">
-                <h4 className="single-prod-name">Gold Chair</h4>
-                <h4 className="single-prod-price">$24.99</h4>
-                <p className="prod-id">Fur-01</p>
-                <p className="prod-descp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea nobis animi eligendi sit sapiente dolor obcaecati facilis! Nemo sit quia quis tempora voluptate quo maxime sint. Dicta, amet laboriosam.</p>
-                <button className='atc-btn'>Add to bag</button>
+                <h4 className="single-prod-name">{product.name}</h4>
+                <h4 className="single-prod-price">${product.price}</h4>
+                <p className="prod-id"></p>
+                <p className="prod-descp">{product.description}</p>
+                <button className='atc-btn' onClick={handleClick}>Add to bag</button>
             </div>
         </div>
         <div className="prod-details">
