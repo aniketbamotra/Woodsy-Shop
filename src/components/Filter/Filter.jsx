@@ -2,6 +2,7 @@ import React from "react";
 import "./Filter.css";
 
 const categories = [
+  { label: "All Products", value: "all" },
   { label: "Decor", value: "decor" },
   { label: "Furniture", value: "furniture" },
   { label: "Storage", value: "storage" },

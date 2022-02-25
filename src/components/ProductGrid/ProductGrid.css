@@ -3,6 +3,10 @@
     flex-wrap: wrap;
     flex: 4;
 }
+.grid-wrap a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
 .grid-wrap img{
     width: 663px;
     height: 663px;

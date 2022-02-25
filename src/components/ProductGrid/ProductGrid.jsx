@@ -3,6 +3,7 @@ import Product from "../Product/Product";
 import "./ProductGrid.css";
 import { AllProd } from "../../products";
 import axios from "axios";
+import { Link } from "react-router-dom"
 
 const ProductGrid = ({ filter, sort }) => {
 
@@ -57,10 +58,13 @@ const ProductGrid = ({ filter, sort }) => {
 
   return (
     <div className="grid-wrap">
+
       {filteredProducts.map((product) => (
+        <Link to={`/product/${product._id}`}>
         <div key={product.id}>
           <Product product={product} />
         </div>
+        </Link>
       ))}
     </div>
   );

@@ -53,11 +53,13 @@
     background-size: cover;
     transform: translateY(-12vh);
 }
-.slide-in-menu h3{
+.slide-in-menu a{
     text-align: center;
     font-family: var(--serif);
     font-size: 7ch;
     cursor: pointer;
+    text-decoration: none;
+    color: rgb(var(--dark-color));
 }
 /* .slide-in-menu-open{
     transform: translateY(-40vh) !important;

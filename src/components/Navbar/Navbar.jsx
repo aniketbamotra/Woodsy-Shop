@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import CartSlider from "../CartSlider/CartSlider";
 import "./Navbar.css";
 
@@ -64,10 +65,10 @@ const Navbar = () => {
         className={`slide-in-menu ${!isMenuActive && "slide-in-menu-close"}`
         }
       >
-        <h3 className="menu-link">Home</h3>
-        <h3 className="menu-link">Shop</h3>
-        <h3 className="menu-link">About</h3>
-        <h3 className="menu-link">Our Products</h3>
+        <Link className="menu-link" to={'/'}>Home</Link>
+        <Link className="menu-link" to={'/products'}>Shop</Link>
+        <Link className="menu-link" to={'/about'}>About</Link>
+        <Link className="menu-link" to={'ourProducts'}>Our Products</Link>
       </div>
       <CartSlider isCartActive={isCartActive} />
     </div>
