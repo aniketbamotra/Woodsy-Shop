@@ -40,7 +40,7 @@ const SingleProd = () => {
                 <h4 className="single-prod-price">${product.price}</h4>
                 <p className="prod-id"></p>
                 <p className="prod-descp">{product.description}</p>
-                <button className='atc-btn' onClick={handleClick}>Add to bag</button>
+                <button className='atc-btn'>Add to bag</button>
             </div>
         </div>
         <div className="prod-details">
