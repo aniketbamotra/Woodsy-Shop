@@ -12,7 +12,7 @@ const ProductGrid = ({ filter, sort }) => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/products");
+        const res = await axios.get("http://woodsy-backend.eba-uej58ayn.us-west-2.elasticbeanstalk.com/api/products");
         setProducts(res.data);
         console.log(res);
       } catch (err) {}
