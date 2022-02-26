@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProduct'
@@ -6,11 +6,13 @@ import './SingleProd.css'
 import { useLocation } from 'react-router-dom';
 import { publicRequest } from '../../requestMethod'
 import axios from 'axios'
+import CartContext from '../../context/cart-context'
 
 const SingleProd = () => {
     const location = useLocation();
     const id = location.pathname.split("/")[2];
     const [product, setProduct] = useState({});
+    const cartCtx = useContext(CartContext);
 
     useEffect(() => {
         const getProduct = async ()=>{
@@ -23,6 +25,10 @@ const SingleProd = () => {
         };
         getProduct()
     },[id]);
+
+    const addToCartHandler = () => {
+        cartCtx.addProduct({...product, amount: 1});
+    };
     
 
   return (
@@ -30,7 +36,7 @@ const SingleProd = () => {
         <p className="bread-crum-container">Home/Shop/Category/Product1</p>
         <div className="prod-wraper">
             <div className="imgs-container">
-                <img src={product.image} />
+                {product.image && <img src={product.image} />}
                 <img src={require('../../asserts/media/scatered-img (2).jpg')} alt="" />
                 <img src={require('../../asserts/media/scatered-img (3).jpg')} alt="" />
                 <img src={require('../../asserts/media/scatered-img (4).jpg')} alt="" />
@@ -40,7 +46,7 @@ const SingleProd = () => {
                 <h4 className="single-prod-price">${product.price}</h4>
                 <p className="prod-id"></p>
                 <p className="prod-descp">{product.description}</p>
-                <button className='atc-btn'>Add to bag</button>
+                <button className='atc-btn' onClick={addToCartHandler} >Add to bag</button>
             </div>
         </div>
         <div className="prod-details">

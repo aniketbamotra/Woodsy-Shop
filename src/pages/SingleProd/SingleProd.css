@@ -21,6 +21,7 @@
 .imgs-container img{
     width: 880px;
     height: 880px;
+    object-fit: cover;
 }
 .prod-text-area{
     flex: 1;

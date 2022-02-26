@@ -3,10 +3,9 @@ import Product from "../Product/Product";
 import "./ProductGrid.css";
 import { AllProd } from "../../products";
 import axios from "axios";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const ProductGrid = ({ filter, sort }) => {
-
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -18,9 +17,8 @@ const ProductGrid = ({ filter, sort }) => {
         console.log(res);
       } catch (err) {}
     };
-    getProducts()
-  },[]);
-  
+    getProducts();
+  }, []);
 
   useEffect(() => {
     if (filter === "all") {
@@ -47,24 +45,25 @@ const ProductGrid = ({ filter, sort }) => {
       );
     } else if (sort === "oldest") {
       setFilteredProducts((prev) =>
-        [...prev].sort((a, b) => b.createdAt - a.createdAt)
+        [...prev].sort(
+          (a, b) => new Date(a.addedToCartAt) - new Date(b.addedToCartAt)
+        )
       );
     } else if (sort === "newest") {
       setFilteredProducts((prev) =>
-        [...prev].sort((a, b) => a.createdAt - b.createdAt)
+        [...prev].sort(
+          (a, b) => new Date(b.addedToCartAt) - new Date(a.addedToCartAt)
+        )
       );
     }
   }, [sort]);
 
   return (
     <div className="grid-wrap">
-
       {filteredProducts.map((product) => (
-        <Link to={`/product/${product._id}`}>
-        <div key={product.id}>
-          <Product product={product} />
-        </div>
-        </Link>
+          <Link key={product._id} to={`/product/${product._id}`}>
+            <Product product={product} />
+          </Link>
       ))}
     </div>
   );
