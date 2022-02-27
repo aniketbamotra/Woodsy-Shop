@@ -4,10 +4,10 @@ import "./OrderDetails.css";
 
 const OrderDetails = (props) => {
   const cartCtx = useContext(CartContext);
-
+  const userShippingDetails = JSON.parse(localStorage.getItem("shippingDetails"));
   const totalPlusTax = cartCtx.totalAmount+(cartCtx.totalAmount*8.8/100);
   const priceRounded = Math.round((totalPlusTax + Number.EPSILON) * 100) / 100;
-  const shippingPrice = props.shipPrice==10?10:props.shipPrice==20?20:0;
+  const shippingPrice = userShippingDetails.shipping==10?10:userShippingDetails.shipping==20?20:0;
   const totalRoundedPrice = priceRounded + (+shippingPrice);
 
   return (

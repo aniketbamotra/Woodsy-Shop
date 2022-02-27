@@ -145,6 +145,7 @@
     position: relative;
     display: grid;
     place-content: center;
+    place-items: center;
     padding: 3rem 0rem;
 }
 .product-intro .intro-text{

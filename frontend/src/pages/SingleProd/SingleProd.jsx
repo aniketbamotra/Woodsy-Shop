@@ -17,7 +17,7 @@ const SingleProd = () => {
     useEffect(() => {
         const getProduct = async ()=>{
             try {
-                const res = await publicRequest.get("/products/"+id);
+                const res = await publicRequest.get("http://woodsy-backend.eba-uej58ayn.us-west-2.elasticbeanstalk.com/api/products/"+id);
                 setProduct(res.data)
                 console.log(res);
                 

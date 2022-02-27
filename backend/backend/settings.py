@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$9u%-ex*44t-a^6p4)m#e%vgozudj^uuhz!1(vorrc5pz$xafo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["woodsy-backend.eba-uej58ayn.us-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["woodsy-backend.eba-uej58ayn.us-west-2.elasticbeanstalk.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -99,6 +99,17 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'ebdb',
+#         'USER': 'woodsyDB',
+#         'PASSWORD': 'woodsyshoppe',
+#         'HOST': 'aa1kdt4wrn2a4rd.cgwruacp2hxe.us-west-2.rds.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
 
 
 # Password validation
