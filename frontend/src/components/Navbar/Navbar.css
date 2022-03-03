@@ -60,7 +60,7 @@
     background-size: cover;
     transform: translateY(-10vh);
 }
-.slide-in-menu a{
+.slide-in-menu div{
     text-align: center;
     font-family: var(--serif);
     font-size: 7ch;

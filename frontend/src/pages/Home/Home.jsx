@@ -34,7 +34,7 @@ const Home = () => {
           pieces enchant for their sobriety, to last for generations, faithful
           to the shapes of each period, with a touch of the present.
         </p>
-        <button className="sq-btn">View</button>
+        <Link to="/our-products"><button className="sq-btn">View</button></Link>
         <ul className="scatered-imgs">
           <li className="scatered-img" id="sct-img1">
             <img

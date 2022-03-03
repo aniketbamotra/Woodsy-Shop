@@ -1,11 +1,12 @@
 .user-details-container{
     width: 65vw;
     display: flex;
+    border-bottom: 1px solid;
 }
 .contact-wrap, .add-wrap, .ship-type-wrap{
     border-left: 1px solid;
     flex: 1;
-    padding: 5rem 0rem 0rem 0rem;
+    padding: 5rem 0rem 5rem 0rem;
 }
 .user-details-container h4{
     margin-left: 5rem;

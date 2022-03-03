@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CartContext from "../../context/cart-context";
 import CartSlider from "../CartSlider/CartSlider";
 import "./Navbar.css";
@@ -8,6 +8,7 @@ import "./Navbar.css";
 const Navbar = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isCartActive, setIsCartActive] = useState(false);
+  const navigate = useNavigate();
 
   const cartCtx = useContext(CartContext);
   const numberOfCartProducts = cartCtx.products.reduce((acc, product) => {
@@ -20,6 +21,22 @@ const Navbar = () => {
 
   const toggleCart = () => {
     setIsCartActive((prevState) => !prevState);
+  };
+  const redirectToHome = () => {
+    toggleMenu();
+    navigate("/");
+  };
+  const redirectToStore = () => {
+    toggleMenu();
+    navigate("/products");
+  };
+  const redirectToOurProducts = () => {
+    toggleMenu();
+    navigate("/our-products");
+  };
+  const redirectToAbout = () => {
+    toggleMenu();
+    navigate("/about");
   };
 
   return (
@@ -53,10 +70,10 @@ const Navbar = () => {
       <div
         className={`slide-in-menu ${!isMenuActive && "slide-in-menu-close"}`}
       >
-        <Link className="menu-link" to={'/'}>Home</Link>
-        <Link className="menu-link" to={'/products'}>Shop</Link>
-        <Link className="menu-link" to={'/about'}>About</Link>
-        <Link className="menu-link" to={'ourProducts'}>Our Products</Link>
+        <div className="menu-link" onClick={redirectToHome}>Home</div>
+        <div className="menu-link" onClick={redirectToStore}>Shop</div>
+        <div className="menu-link" onClick={redirectToAbout}>About</div>
+        <div className="menu-link" onClick={redirectToOurProducts}>Our Products</div>
       </div>
       <CartSlider isCartActive={isCartActive} toggleCart={toggleCart} />
     </div>
