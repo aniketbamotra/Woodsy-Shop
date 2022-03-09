@@ -4,6 +4,7 @@ import './userDetails.css'
 import { PayPalButton } from 'react-paypal-button-v2';
 import { useEffect, useState, useContext } from 'react';
 import CartContext from '../../context/cart-context';
+import axios from 'axios';
 
 const UserDetails = () => {
   // add btn for editing and toggleform
@@ -14,15 +15,7 @@ const UserDetails = () => {
   const priceRounded = Math.round((totalPlusTax + Number.EPSILON) * 100) / 100;
   const shippingPrice = userShippingDetails.shipping==10?10:userShippingDetails.shipping==20?20:0;
   const totalRoundedPrice = priceRounded + (+shippingPrice);
-
-//   const successPaymentHandler = () =>{
-//   fetch("https://....", {
-//   method: "POST",
-//   headers: headers,
-//   body:  JSON.stringify(data)
-// })
-
-//   }
+  const orderSummery = JSON.parse(localStorage.getItem("cartState"));
 
   const [ sdkReady, setSdkReady ] = useState(false);
   useEffect(() => {
@@ -45,8 +38,14 @@ const UserDetails = () => {
     }
   }, []);
 
-  
-
+  const successPaymentHandler = async () => {
+    const URL = "";
+    const { data } = await axios.post(URL, {
+      order: orderSummery,
+      shipping: userShippingDetails
+    } );  
+    
+  }
 
   return (
     <div>
