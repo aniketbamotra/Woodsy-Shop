@@ -15,6 +15,15 @@ const UserDetails = () => {
   const shippingPrice = userShippingDetails.shipping==10?10:userShippingDetails.shipping==20?20:0;
   const totalRoundedPrice = priceRounded + (+shippingPrice);
 
+//   const successPaymentHandler = () =>{
+//   fetch("https://....", {
+//   method: "POST",
+//   headers: headers,
+//   body:  JSON.stringify(data)
+// })
+
+//   }
+
   const [ sdkReady, setSdkReady ] = useState(false);
   useEffect(() => {
 
@@ -59,7 +68,7 @@ const UserDetails = () => {
           <p className="user-ship">{userShippingDetails.shipping==0?"Normal Shipping (4-5 days)":userShippingDetails.shipping==10?"Fast Shipping (2-3 days)":"Super Fast Shipping (1 day)"}</p>
         </div>
       </div>
-      <PayPalButton amount={totalRoundedPrice}></PayPalButton>
+      <PayPalButton amount={totalRoundedPrice} onSuccess={successPaymentHandler}></PayPalButton>
     </div>
   )
 }

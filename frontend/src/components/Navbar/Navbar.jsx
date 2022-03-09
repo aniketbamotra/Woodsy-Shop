@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import { Call } from "@material-ui/icons";
+import React, { lazy, useContext, useEffect } from "react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import CartContext from "../../context/cart-context";
 import CartSlider from "../CartSlider/CartSlider";
 import "./Navbar.css";
@@ -9,6 +10,19 @@ const Navbar = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isCartActive, setIsCartActive] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  
+  useEffect(()=>{
+    const Nav = document.querySelector("#nav-wrap");
+    const menuLine = document.getElementsByClassName("line");
+    const cart = document.querySelector(".cart-icon-container");
+    location.pathname==="/"?Nav.classList.add("nav-container-trans"):Nav.classList.add("nav-container");
+    for(var i=0;i<menuLine.length;i++){
+      location.pathname==="/"?menuLine[i].classList.add("line-trans"):menuLine[i].classList.remove("line-trans");
+    }
+    location.pathname==="/"?Nav.classList.remove("nav-container"):Nav.classList.remove("nav-container-trans");
+    location.pathname==="/"?cart.classList.add("cart-icon-container-trans"):cart.classList.remove("cart-icon-container-trans");
+  });
 
   const cartCtx = useContext(CartContext);
   const numberOfCartProducts = cartCtx.products.reduce((acc, product) => {
@@ -41,7 +55,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="nav-container">
+      <div className="nav-container" id="nav-wrap">
         <div className={`menu-container menu ${isMenuActive && "opened"}`} onClick={toggleMenu} aria-label="Main Menu">
           <svg width="100" height="100" viewBox="0 0 100 100">
             <path className="line line2" d="M 20,50 H 80" />
