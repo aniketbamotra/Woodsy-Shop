@@ -25,3 +25,7 @@
     width: 100%;
     border-radius: 6px;
 }
+.top-items a{
+    text-decoration: none;
+    color: var(--dark-color);
+}

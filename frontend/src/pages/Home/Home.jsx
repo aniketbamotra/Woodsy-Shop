@@ -15,7 +15,7 @@ const Home = () => {
       <div className="landing-screen">
         <h3 className="intro-text">
           Woodwork that's more <br />
-          than just suvinour.
+          than just souvenir.
         </h3>
 
         <Link to="/products">
@@ -67,7 +67,7 @@ const Home = () => {
         <div className="feat-prod-wrap">
           <FeaturedProduct />
         </div>
-        <p className="show-link">Shop All</p>
+        <Link to="/products" className="show-link">Shop All</Link>
       </div>
       <div className="spotlight">
         <div className="spotlight-text">
@@ -80,7 +80,7 @@ const Home = () => {
             Artifact for Art Lovers,& can be a great marvel of attraction for
             your living rooms. wooden elephant sculptures, wooden elephant.
           </p>
-          <p className="spotlight-link">View Product</p>
+          <Link to="/products" className="spotlight-link">View Products</Link>
         </div>
         <img src={require("../../asserts/media/spotlight.png")} alt="" />
       </div>

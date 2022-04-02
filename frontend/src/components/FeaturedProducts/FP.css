@@ -2,3 +2,42 @@
     display: flex;
     justify-content: space-evenly;
 }
+.feat-prod-items a{
+    color: var(--dark-color);
+    text-decoration: none;
+}
+/* .feat-prod-items img{
+    width: 17rem;
+    height: 17rem;
+} */
+@media (max-width: 1440px) {
+    .prod-wrap img{
+        width: 17rem;
+        height: 17rem;
+    }
+    .top-prod-wrap{
+        width: 25rem;
+        height: 25rem;
+    }
+    .top-prod-wrap img{
+        height: 20rem;
+    }
+}
+@media (max-width: 1024px) {
+    .prod-wrap{
+        padding: 2rem 2rem 0rem 2rem;
+    }
+    .prod-wrap img{
+        width: 12rem;
+        height: 12rem;
+    }
+    .prod-wrap .product-name{
+        font-size: 16px;
+    }
+    .prod-wrap .product-price{
+        font-size: 16px;
+    }
+    .spotlight-text{
+        padding: 1rem 0rem;
+    }
+}

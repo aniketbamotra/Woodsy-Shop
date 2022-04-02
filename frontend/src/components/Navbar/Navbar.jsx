@@ -64,7 +64,7 @@ const Navbar = () => {
           </svg>
         </div>
 
-        <div href="../Home/Home.jsx" className="logo-container"></div>
+        <Link to="/" className="logo-container"></Link>
 
         <div className="cart-icon-container" onClick={toggleCart}>
           <svg

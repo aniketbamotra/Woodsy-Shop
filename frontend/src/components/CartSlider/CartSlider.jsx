@@ -18,15 +18,15 @@ const CartSlider = (props) => {
 
   const cartItemRemove = (productId) => {
     cartCtx.clearProduct(productId);
-  }
+  };
 
   const redirectToCheckout = () => {
     props.toggleCart();
     navigate("/checkout");
   };
 
-  const totalPlusTax = cartCtx.totalAmount+(cartCtx.totalAmount*8.8/100);
-  const priceRounded = Math.round((totalPlusTax + Number.EPSILON) * 100) / 100;
+  // const totalPlusTax = cartCtx.totalAmount+(cartCtx.totalAmount*8.8/100);
+  // const priceRounded = Math.round((totalPlusTax + Number.EPSILON) * 100) / 100;
 
   return (
     <div className={`cart ${props.isCartActive && "open-cart"}`}>
@@ -45,15 +45,16 @@ const CartSlider = (props) => {
               <p className="qnty-no">{product.amount}</p>
               <Add className="plus" onClick={() => cartItemIncrease(product)} />
             </div>
-            <Close className="dlt-item" onClick={() => cartItemRemove(product._id)} />
+            <Close
+              className="dlt-item"
+              onClick={() => cartItemRemove(product._id)}
+            />
           </div>
         ))}
 
         <div className="cart-subtotal">
-          <p className="cart-sect-title">Sub-Total incl. tax</p>
-          <p className="subtotal-price">
-            {"$" + priceRounded}
-          </p>
+          <p className="cart-sect-title">Sub-Total</p>
+          <p className="subtotal-price">{"$" + cartCtx.totalAmount}</p>
         </div>
         <div className="cart-btn-container">
           <button className="shoping" onClick={props.toggleCart}>
