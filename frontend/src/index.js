@@ -6,7 +6,9 @@ import "./index.css";
 
 ReactDOM.render(
   <Router>
-    <App />
+    <main style={{ position: "relative", overflowX: "hidden" }}>
+      <App />
+    </main>
   </Router>,
   document.getElementById("root")
 );

@@ -57,3 +57,8 @@ footer h4, footer ul{
     float: right;
     text-transform: uppercase;
 }
+@media (min-width: 1024px) {
+    .ft-list{
+        padding: 3rem 0rem 3rem 3rem;
+    }
+}

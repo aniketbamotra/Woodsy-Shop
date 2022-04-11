@@ -108,3 +108,11 @@
     border-radius: 6px;
     object-fit: contain;
 }
+
+
+@media (max-width: 1440px) {
+    .imgs-container img{
+        width: 728px;
+        height: 728px;
+    }
+}

@@ -249,7 +249,7 @@
     .intro-para{
         padding: 0rem 10rem;
     }
-    #sct_img2 img{
+    #sct-img2 img{
         transform: translate(5rem, -18rem);
     }
     #sct-img3 img{
@@ -329,3 +329,29 @@
     object-fit: cover;
 }
 
+@media (max-width: 1024px) {
+    .spotlight img{
+        width: 50vw;
+        height: 50vw;
+    }
+    .spotlight-text{
+        width: 50vw;
+        height: 50vw;
+        padding: 0;
+    }
+    .spotlight-text .sect-title{
+        font-size: 24px;
+        line-height: 76px;
+        margin-left: 4rem;
+    }
+    .spotlight-text .intro-para{
+        margin: 0rem 4rem;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .spotlight-link{
+        font-size: 18px;
+        line-height: 33px;
+        margin: 0rem 4rem;
+    }
+}

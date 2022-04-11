@@ -29,3 +29,14 @@
     text-decoration: none;
     color: var(--dark-color);
 }
+@media (max-width: 1440px) {
+    .top-items .top-prod-wrap{
+        height: 25rem;
+    }
+    .top-prod-wrap .product-name{
+        font-size: 18px;
+    }
+    .top-prod-wrap .product-price{
+        font-size: 18px;
+    }    
+}
