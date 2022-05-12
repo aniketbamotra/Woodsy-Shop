@@ -10,7 +10,7 @@
 }
 .nav-container-trans{
     position: absolute;
-    padding: 1rem 0rem;
+    padding: 2rem 0rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -84,6 +84,9 @@
     cursor: pointer;
     text-decoration: none;
     color: rgb(var(--dark-color));
+}
+.menu-link-trans div{
+    margin-top: 10rem;
 }
 /* .slide-in-menu-open{
     transform: translateY(-40vh) !important;
