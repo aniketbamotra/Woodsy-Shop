@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-$9u%-ex*44t-a^6p4)m#e%vgozudj^uuhz!1(vorrc5pz$xafo
 DEBUG = True
 
 ALLOWED_HOSTS = ["woodsy-backend.eba-uej58ayn.us-west-2.elasticbeanstalk.com",
-                 "woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com", "managedatabase.woodsyshoppe.com", "127.0.0.1", "localhost"]
+                 "woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com", "managedatabase.woodsyshoppe.com", "127.0.0.1", "localhost", "172.31.30.212"]
 
 
 # Application definition
