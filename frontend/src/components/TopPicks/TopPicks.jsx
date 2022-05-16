@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import './TP.css'
-import Product from '../Product/Product'
-import { topProd } from '../../products'
+import React, { useEffect, useState } from "react";
+import "./TP.css";
+import Product from "../Product/Product";
+import { topProd } from "../../products";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,9 @@ const TopPicks = () => {
   useEffect(() => {
     const getTopProducts = async () => {
       try {
-        const res = await axios.get("http://woodsy-backend.eba-uej58ayn.us-west-2.elasticbeanstalk.com/api/products");
+        const res = await axios.get(
+          "http://woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com/api/products"
+        );
         setTopProducts(res.data);
         console.log(res);
       } catch (err) {}
@@ -21,14 +23,18 @@ const TopPicks = () => {
 
   return (
     <div className="top-items">
-        {topProducts.slice(0,2).map((product)=>(
-            <Link to={`/product/${product._id}`} className='top-prod-wrap' id={product.id} key={product._id}>
-                <Product product = {product}/>
-            </Link>
-        ))}
-      </div>
-  )
-}
+      {topProducts.slice(0, 2).map((product) => (
+        <Link
+          to={`/product/${product._id}`}
+          className="top-prod-wrap"
+          id={product.id}
+          key={product._id}
+        >
+          <Product product={product} />
+        </Link>
+      ))}
+    </div>
+  );
+};
 
-export default TopPicks
-
+export default TopPicks;
