@@ -12,7 +12,7 @@ const TopPicks = () => {
     const getTopProducts = async () => {
       try {
         const res = await axios.get(
-          "http://woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com/api/products"
+          "https://woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com/api/products"
         );
         setTopProducts(res.data);
         console.log(res);

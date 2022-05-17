@@ -9,10 +9,12 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
 import os
 from pathlib import Path
 
+import environ
+env = environ.Env()
+environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$9u%-ex*44t-a^6p4)m#e%vgozudj^uuhz!1(vorrc5pz$xafo'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'base.apps.BaseConfig',
+    'backend',
 ]
 
 MIDDLEWARE = [
@@ -106,11 +109,10 @@ else:
 #         'NAME': 'ebdb',
 #         'USER': 'woodsyDB',
 #         'PASSWORD': 'woodsyshoppe',
-#         'HOST': 'aa1kdt4wrn2a4rd.cgwruacp2hxe.us-west-2.rds.amazonaws.com',
+#         'HOST': 'aaq98g6rt9sw4e.cgwruacp2hxe.us-west-2.rds.amazonaws.com',
 #         'PORT': '5432',
 #     }
 # }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
