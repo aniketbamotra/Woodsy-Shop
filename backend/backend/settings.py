@@ -29,7 +29,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ["woodsy-backend.eba-uej58ayn.us-west-2.elasticbeanstalk.com",
-                 "woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com", "managedatabase.woodsyshoppe.com", "127.0.0.1", "localhost", "172.31.30.212", "100.21.79.27"]
+                 "woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com", "managedatabase.woodsyshoppe.com", "127.0.0.1", "localhost", "172.31.30.212", "100.21.79.27", "*"]
 
 
 # Application definition
