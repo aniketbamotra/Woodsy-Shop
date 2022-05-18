@@ -18,7 +18,7 @@ const SingleProd = () => {
     const getProduct = async () => {
       try {
         const res = await publicRequest.get(
-          "https://woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com/api/products/api/products/" +
+          "https://managedatabase.woodsyshoppe.com/api/products/api/products/" +
             id
         );
         setProduct(res.data);

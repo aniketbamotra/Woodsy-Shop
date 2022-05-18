@@ -109,7 +109,7 @@ else:
 #         'NAME': 'ebdb',
 #         'USER': 'woodsyDB',
 #         'PASSWORD': 'woodsyshoppe',
-#         'HOST': 'aaq98g6rt9sw4e.cgwruacp2hxe.us-west-2.rds.amazonaws.com',
+#         'HOST': 'aa1c693z5rf07kl.cgwruacp2hxe.us-west-2.rds.amazonaws.com',
 #         'PORT': '5432',
 #     }
 # }

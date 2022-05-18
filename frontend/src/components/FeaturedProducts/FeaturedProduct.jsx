@@ -12,7 +12,7 @@ const FeaturedProduct = () => {
     const getFeatProducts = async () => {
       try {
         const res = await axios.get(
-          "https://woodsy-backend-2.eba-uej58ayn.us-west-2.elasticbeanstalk.com/api/products"
+          "https://managedatabase.woodsyshoppe.com/api/products"
         );
         setFeatProducts(res.data);
         console.log(res);
