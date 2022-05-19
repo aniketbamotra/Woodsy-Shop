@@ -23,10 +23,14 @@ const Navbar = () => {
     //     ? menuLine[i].classList.add("line-trans")
     //     : menuLine[i].classList.remove("line-trans");
     // }
-    const slideMenu = document.querySelector("#slide-menu-inner-wrap");
-    location.pathname === "/"
-      ? slideMenu.classList.add("menu-link-trans")
-      : slideMenu.classList.remove("menu-link-trans");
+    const slideMenu = document.querySelector(".menu-icon");
+    if (location.pathname != "/") {
+      slideMenu.classList.add("menu-icon-b");
+      slideMenu.classList.remove("menu-icon-w");
+    } else {
+      slideMenu.classList.add("menu-icon-w");
+      slideMenu.classList.remove("menu-icon-b");
+    }
     location.pathname === "/"
       ? Nav.classList.remove("nav-container")
       : Nav.classList.remove("nav-container-trans");
@@ -92,11 +96,11 @@ const Navbar = () => {
           </svg> */}
 
           <div className="demo">
-            <div className="menu-icon">
+            <div className="menu-icon menu-icon-w">
               <input className="menu-icon__cheeckbox" type="checkbox" />
               <div>
-                <span></span>
-                <span></span>
+                <span id="line1"></span>
+                <span id="line2"></span>
               </div>
             </div>
           </div>
@@ -145,15 +149,15 @@ const Navbar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-facebook"
+              className="icon icon-tabler icon-tabler-brand-facebook"
               width="44"
               height="44"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="#793a17"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
@@ -166,15 +170,15 @@ const Navbar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-instagram"
+              className="icon icon-tabler icon-tabler-brand-instagram"
               width="44"
               height="44"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="#793a17"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <rect x="4" y="4" width="16" height="16" rx="4" />
@@ -189,15 +193,15 @@ const Navbar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-pinterest"
+              className="icon icon-tabler icon-tabler-brand-pinterest"
               width="44"
               height="44"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="#793a17"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <line x1="8" y1="20" x2="12" y2="11" />

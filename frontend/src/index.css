@@ -17,7 +17,7 @@ html,body
     box-sizing: border-box;
 }
 body{
-    overflow-x: hidden;
+    contain: paint;
 }
 #bg-img{
     min-width: 100%;

@@ -68,13 +68,13 @@
 .slide-in-menu-close{
     transform: translateY(-45vh);
 } */
-.home-main{
+/* .home-main{
     overflow-x: hidden;
-}
+} */
 .nav-wrap{
     position: absolute;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .home-main .nav-wrap svg{
     stroke: rgb(var(--light-color));
@@ -111,30 +111,61 @@
 .sq-btn{
     width: 16rem;
     height: 4rem;
-    background-color: transparent;
-    border: 2px solid rgb(var(--light-color));
-    color: rgb(var(--light-color));
     font-family: var(--sans);
     font-size: 3.5ch;
     font-weight: 600;
     position: relative;
     z-index: 5;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border: 0;
 }
-.sq-btn::before{
-    content: "";
+.btn-13 {
+    background: rgb(var(--light-color));
+    color: rgb(var(--accent-color));
+    z-index: 1;
+ }
+ .btn-13-d {
+    background: rgb(var(--accent-color));
+    color: rgb(var(--light-color));
+    z-index: 1;
+ }
+ .btn-13:after {
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 0;
+   bottom: 0;
+   left: 0;
+   z-index: -1;
+   background: rgb(var(--accent-color));
+   transition: all 0.3s ease;
+ }
+ .btn-13-d::after {
     position: absolute;
-    border: 2px solid rgb(var(--light-color));
-    width: 16.5rem;
-    height: 4.5rem;
-    left: -0.5rem;
-    top: -0.5rem;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
-}
-.sq-btn:hover{
-    background-color: rgb(var(--accent-color));
-    border-color: rgb(var(--light-color));
-}
+    background: rgb(var(--light-color));
+    transition: all 0.3s ease;
+  }
+ .btn-13:hover {
+   color: rgb(var(--light-color));
+ }
+ .btn-13-d:hover {
+    color: rgb(var(--accent-color));
+  }
+ .btn-13:hover:after, .btn-13-d:hover:after {
+   top: 0;
+   height: 100%;
+ }
+ .btn-13:active, .btn-13-d:active {
+   top: 2px;
+ }
+
 /* .landing-screen button:hover::before{
     background-color: rgb(var(--accent-color));
 } */
@@ -162,13 +193,13 @@
     text-align: center;
     color: rgb(var(--dark-color));
 }
-.product-intro .sq-btn{
+/* .product-intro .sq-btn{
     color: rgb(var(--dark-color));
     border-color: rgb(var(--dark-color));
 }
 .product-intro .sq-btn::before{
     border-color: rgb(var(--dark-color));
-}
+} */
 .scatered-imgs{
     position: absolute;
     list-style: none;

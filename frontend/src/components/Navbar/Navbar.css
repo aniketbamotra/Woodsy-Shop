@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: auto;
+    /* overflow: auto; */
     z-index: 15;
 }
 .nav-container-trans{
@@ -159,7 +159,7 @@
     align-self: center;
     justify-self: baseline;
     margin-left: 0 !important;
-    margin-top: 7rem !important;
+    margin-top: 10rem !important;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(100px, 18rem);
@@ -192,7 +192,7 @@
     height: 0;
 }
 #menu-social-logo1 svg, #menu-social-logo2 svg, #menu-social-logo3 svg{
-    height:11rem;
+    height:4rem;
 }
 #menu-social-logo1{
     grid-area: 3/1/4/2;
@@ -242,9 +242,14 @@
     display: block;
     width: 100%;
     height: 2px;
-    background-color: rgb(var(--light-color));
     border-radius: 1px;
     transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+}
+.menu-icon-w span{
+    background-color: rgb(var(--light-color));
+}
+.menu-icon-b span{
+    background-color: rgb(var(--dark-color));
 }
 .menu-icon span:first-of-type {
     top: 0;
@@ -255,14 +260,15 @@
 .menu-icon .active span:first-of-type, .menu-icon .menu-icon__cheeckbox:checked + div span:first-of-type {
     transform: rotate(45deg);
     top: 5px;
-    background-color: rgb(var(--dark-color));
 }
 .menu-icon.active span:last-of-type, .menu-icon .menu-icon__cheeckbox:checked + div span:last-of-type {
     transform: rotate(-45deg);
-    bottom: 5px;
-    background-color: rgb(var(--dark-color));
-    
+    bottom: 5px; 
 }
+.menu-icon-w .menu-icon__cheeckbox:checked + div span{
+    background-color: rgb(var(--dark-color));
+}
+
 .menu-icon.active:hover span:first-of-type, .menu-icon.active:hover span:last-of-type, .menu-icon:hover .menu-icon__cheeckbox:checked + div span:first-of-type, .menu-icon:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
     width: 30px;
 }

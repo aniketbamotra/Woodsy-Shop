@@ -19,7 +19,8 @@ const Home = () => {
         </h3>
 
         <Link to="/products">
-          <button className="sq-btn">Shop Now</button>
+          {/* <button className="sq-btn">Shop Now</button> */}
+          <button className="sq-btn btn-13">Shop Now</button>
         </Link>
       </div>
       <div className="product-intro">
@@ -34,7 +35,9 @@ const Home = () => {
           pieces enchant for their sobriety, to last for generations, faithful
           to the shapes of each period, with a touch of the present.
         </p>
-        <Link to="/our-products"><button className="sq-btn">View</button></Link>
+        <Link to="/our-products">
+          <button className="sq-btn btn-13-d">View</button>
+        </Link>
         <ul className="scatered-imgs">
           <li className="scatered-img" id="sct-img1">
             <img
@@ -67,7 +70,9 @@ const Home = () => {
         <div className="feat-prod-wrap">
           <FeaturedProduct />
         </div>
-        <Link to="/products" className="show-link">Shop All</Link>
+        <Link to="/products" className="show-link">
+          Shop All
+        </Link>
       </div>
       <div className="spotlight">
         <div className="spotlight-text">
@@ -80,7 +85,9 @@ const Home = () => {
             Artifact for Art Lovers,& can be a great marvel of attraction for
             your living rooms. wooden elephant sculptures, wooden elephant.
           </p>
-          <Link to="/products" className="spotlight-link">View Products</Link>
+          <Link to="/products" className="spotlight-link">
+            View Products
+          </Link>
         </div>
         <img src={require("../../asserts/media/spotlight.png")} alt="" />
       </div>

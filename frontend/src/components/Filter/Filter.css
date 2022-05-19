@@ -7,7 +7,7 @@
 }
 .flt-sticky-container{
     position: sticky;
-    top: 1px;
+    top: 0;
     height: fit-content;
 }
 .filter{
@@ -23,7 +23,6 @@
     line-height: 74px;
     text-align: center;
     border-bottom: 1px solid;
-    /* border-top: 1px solid; */
     margin: 0;
     text-transform: uppercase;
 }
