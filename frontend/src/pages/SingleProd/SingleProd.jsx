@@ -18,8 +18,7 @@ const SingleProd = () => {
     const getProduct = async () => {
       try {
         const res = await publicRequest.get(
-          "https://managedatabase.woodsyshoppe.com/api/products/api/products/" +
-            id
+          "https://managedatabase.woodsyshoppe.com/api/products/" + id
         );
         setProduct(res.data);
         console.log(res);
