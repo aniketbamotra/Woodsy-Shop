@@ -63,19 +63,31 @@
     cursor: pointer;
 }
 
-.slide-in-menu{
-    position: absolute;
+.slide-menu-wrap{
+    position: fixed;
     z-index: 10;
+    top: 0;
+    background-color: rgb(var(--dark-color),.5);
+    width: 100vw;
+    height: 100vh;
+    visibility: collapse;
+    opacity: 0;
+    transition: all .7s ease;
+}
+.slide-menu-wrap-open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.slide-in-menu{
     width: 40vw;
     height: 100vh;
-    top: 0;
     display: flex;
     flex-direction: column;
     justify-content:start;
     background-image: url('/src/asserts/media/bg-img.jpg');
     background-size: cover;
     transform: translateX(-50vw);
-    padding-top: 7rem;
     transition: transform .3s cubic-bezier(0,-0.03,.78,1);
 }
 .slide-in-menu div{
@@ -88,6 +100,9 @@
     width: max-content;
     text-transform: uppercase;
     margin: 1rem 0rem 0rem 5rem;
+}
+.slide-in-menu div:first-of-type{
+    margin-top: 8rem;
 }
 .slide-in-menu div:hover{
     color: rgb(var(--light-color));

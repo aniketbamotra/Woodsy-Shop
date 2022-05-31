@@ -46,12 +46,18 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuActive((prevState) => !prevState);
+    let menuWrap = document.querySelector(".slide-menu-wrap");
     let menuIcon = document.querySelector(".menu-icon__cheeckbox");
     let menuSwitch = document.querySelector(".slide-in-menu");
-    if (menuSwitch.classList.contains("slide-in-menu-close")) {
+    if (
+      menuSwitch.classList.contains("slide-in-menu-close") &&
+      menuWrap.classList.contains("slide-menu-wrap-open")
+    ) {
       menuIcon.checked = false;
+      menuWrap.classList.remove("slide-menu-wrap-open");
     } else {
       menuIcon.checked = true;
+      menuWrap.classList.add("slide-menu-wrap-open");
     }
   };
 
@@ -123,92 +129,94 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div
-        className={`slide-in-menu ${!isMenuActive && "slide-in-menu-close"}`}
-        id="slide-menu-inner-wrap"
-      >
-        <div className="menu-link" onClick={redirectToHome}>
-          Home
-        </div>
-        <div className="menu-link" onClick={redirectToStore}>
-          Shop
-        </div>
-        <div className="menu-link" onClick={redirectToAbout}>
-          About
-        </div>
-        <div className="menu-link" onClick={redirectToOurProducts}>
-          Our Products
-        </div>
-        <div className="menu-logo-wrap">
-          <img src={openMenuLogo} className="menu-logo-container"></img>
-          <h4 className="menu-logo-title">The Woodsy Shop</h4>
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            id="menu-social-logo1"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-brand-facebook"
-              width="44"
-              height="44"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="#793a17"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+      <div className="slide-menu-wrap" onClick={toggleMenu}>
+        <div
+          className={`slide-in-menu ${!isMenuActive && "slide-in-menu-close"}`}
+          id="slide-menu-inner-wrap"
+        >
+          <div className="menu-link" onClick={redirectToHome}>
+            Home
+          </div>
+          <div className="menu-link" onClick={redirectToStore}>
+            Shop
+          </div>
+          <div className="menu-link" onClick={redirectToAbout}>
+            About
+          </div>
+          <div className="menu-link" onClick={redirectToOurProducts}>
+            Our Products
+          </div>
+          <div className="menu-logo-wrap">
+            <img src={openMenuLogo} className="menu-logo-container"></img>
+            <h4 className="menu-logo-title">The Woodsy Shop</h4>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              id="menu-social-logo1"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-            </svg>
-          </a>
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            id="menu-social-logo2"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-brand-instagram"
-              width="44"
-              height="44"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="#793a17"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-brand-facebook"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="#793a17"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              id="menu-social-logo2"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <rect x="4" y="4" width="16" height="16" rx="4" />
-              <circle cx="12" cy="12" r="3" />
-              <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
-            </svg>
-          </a>
-          <a
-            href="https://www.pinterest.ca/"
-            target="_blank"
-            id="menu-social-logo3"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-brand-pinterest"
-              width="44"
-              height="44"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="#793a17"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-brand-instagram"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="#793a17"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="4" y="4" width="16" height="16" rx="4" />
+                <circle cx="12" cy="12" r="3" />
+                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+              </svg>
+            </a>
+            <a
+              href="https://www.pinterest.ca/"
+              target="_blank"
+              id="menu-social-logo3"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <line x1="8" y1="20" x2="12" y2="11" />
-              <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" />
-              <circle cx="12" cy="12" r="9" />
-            </svg>
-          </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-brand-pinterest"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="#793a17"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <line x1="8" y1="20" x2="12" y2="11" />
+                <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
       <CartSlider isCartActive={isCartActive} toggleCart={toggleCart} />

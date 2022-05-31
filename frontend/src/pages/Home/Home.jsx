@@ -25,8 +25,8 @@ const Home = () => {
       </div>
       <div className="product-intro">
         <h3 className="intro-text">
-          CREATING GIFTS WITH <br />A LONG AND RICH <br />
-          HISTORY.
+          CREATING GIFTS WITH A LONG
+          <br /> AND RICH HISTORY.
         </h3>
         <p className="intro-para">
           Developed the concept of exclusivity, a Woodsyshoppe features timeless
