@@ -16,10 +16,12 @@ footer h4, footer ul{
     border-bottom: 1px solid rgb(var(--light-color));
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .ft-list{
     list-style: none;
     border-right: 1px solid;
+    border-bottom: 1px solid rgb(var(--light-color));
     flex: 1;
     padding: 3rem 0rem 3rem 7rem;
 }
@@ -61,4 +63,22 @@ footer h4, footer ul{
     .ft-list{
         padding: 3rem 0rem 3rem 3rem;
     }
+}
+@media (max-width: 768px) {
+    .ft-list{
+        padding-left: .5rem;
+    }
+}
+@media (max-width: 425px) {
+    .ft-list{
+        padding-left: 1rem;
+    }
+    .copy{
+        padding: 1rem 1rem 2rem 1rem;
+    }
+    .credit{
+        text-align: left;
+        float: left;
+        margin-top: .5rem;
+    }    
 }

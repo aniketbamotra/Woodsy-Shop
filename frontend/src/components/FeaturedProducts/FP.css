@@ -43,3 +43,16 @@
         font-size: 18px;
     }
 }
+@media (max-width: 425px) {
+    .prod-wrap{
+        padding: 1rem 1rem 0rem 1rem;
+    }
+    .feat-prod-items .prod-wrap .product-name{
+        width: 55%;
+        font-size: 16px;
+    }
+    .feat-prod-items .prod-wrap .product-price{
+        width: 45%;
+        font-size: 16px;
+    }
+}

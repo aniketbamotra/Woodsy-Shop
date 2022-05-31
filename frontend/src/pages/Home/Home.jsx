@@ -13,10 +13,7 @@ const Home = () => {
         <Navbar />
       </div> */}
       <div className="landing-screen">
-        <h3 className="intro-text">
-          Woodwork that's more <br />
-          than just souvenir.
-        </h3>
+        <h3 className="intro-text">Woodwork that's more than just souvenir.</h3>
 
         <Link to="/products">
           {/* <button className="sq-btn">Shop Now</button> */}
@@ -25,8 +22,7 @@ const Home = () => {
       </div>
       <div className="product-intro">
         <h3 className="intro-text">
-          CREATING GIFTS WITH A LONG
-          <br /> AND RICH HISTORY.
+          CREATING GIFTS WITH A LONG AND RICH HISTORY.
         </h3>
         <p className="intro-para">
           Developed the concept of exclusivity, a Woodsyshoppe features timeless

@@ -35,16 +35,22 @@
 }
 .cart-icon-container{
     cursor: pointer;
-    margin: 1rem 1rem;
+    position: relative;
+    top: 1rem;
+    right: 1rem;
+}
+.nav-container-trans .cart-icon-container{
+    top: 0rem;
+    right: .5rem;
 }
 .cart-icon-container-trans{
     cursor: pointer;
     margin: 1rem 1rem;
 }
 .cart-badge{
-    position: absolute;
-    right: 1rem;
-    top: 4rem;
+    position: relative;
+    right: -1rem;
+    top: -1rem;
     width: 2rem;
     height: 2rem;
     background-color: rgb(var(--accent-color));
@@ -61,6 +67,10 @@
     background-image: url(/public/asserts/logo/textured.svg);
     background-size: cover;
     cursor: pointer;
+}
+.nav-container-trans .logo-container{
+    position: relative;
+    top: -1rem;
 }
 
 .slide-menu-wrap{
@@ -222,6 +232,11 @@
 
   /* new nav css */
 
+.nav-container-trans .demo{
+    position: relative;
+    top: -1rem;
+}
+
 .demo .menu-icon {
     transform: scale(1.5);
 }
@@ -287,7 +302,16 @@
 .menu-icon.active:hover span:first-of-type, .menu-icon.active:hover span:last-of-type, .menu-icon:hover .menu-icon__cheeckbox:checked + div span:first-of-type, .menu-icon:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
     width: 30px;
 }
-@media (min-width: 1024px) {
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
     .nav-container-trans{
         width: 97%;
     }
@@ -297,4 +321,43 @@
     .menu-icon:hover span:last-of-type {
         width: 12px;
    }
+   .slide-in-menu{
+       width: 45vw;
+   }
+   .slide-in-menu div{
+       font-size: 5ch;
+   }
 }
+@media (max-width: 768px) {
+    .logo-container{
+        width: 4rem;
+        height: 4rem;
+    }
+    .slide-in-menu div{
+        font-size: 4ch;
+    }
+}
+@media (max-width: 425px) {
+    .menu-icon div{
+        width: 20px;
+        height: 8px;
+    }
+    .logo-container{
+        width: 3rem;
+        height: 3rem;
+    }
+    .slide-menu-wrap{
+        height: 200vh;
+    }
+    .slide-in-menu{
+        width: 100vw;
+        transform: translateX(-100vw);
+    }
+    .slide-in-menu-close{
+        transform: translateX(0vw);
+    }
+    .menu-logo-wrap{
+        margin-top: 3rem !important;
+    }
+}
+
