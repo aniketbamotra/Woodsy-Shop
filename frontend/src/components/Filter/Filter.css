@@ -42,3 +42,77 @@
     border-bottom: 1px solid;
 }
 
+
+
+/* filter button */
+
+.flt-btn-wrap{
+    width: 100vw;
+    display: flex;
+}
+.flt-btn-wrap .cat-btn, .flt-btn-wrap .sort-btn{
+    width: 46vw;
+    height: 2rem;
+    border: 2px solid;
+    margin: .5rem .5rem;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.flt-btn-wrap .cat-btn:hover, .flt-btn-wrap .sort-btn:hover{
+    background-color: rgb(var(--accent-color));
+    color: rgb(var(--light-color));
+    border-color: rgb(var(--accent-color));
+}
+
+.flt-btn-slider{
+    position: absolute;
+    width: 96vw;
+    height: 0rem;
+    margin: .5rem 0rem;
+    left: .5rem;
+    z-index: 10;
+    background-color: rgb(var(--light-color));
+    transition: height .3s ease-in-out;
+}
+.flt-btn-slider ul:only-of-type{
+    position: relative;
+    z-index: 12;
+    color: rgb(var(--dark-color));
+    visibility: collapse;
+    transition: all .0s ease .2s;
+    border-bottom: 0px;
+}
+.flt-btn-wrap .cat-btn:hover .flt-btn-slider ul:only-of-type, .flt-btn-wrap .sort-btn:hover .flt-btn-slider ul:only-of-type{
+    visibility: visible;
+}
+.flt-btn-wrap .cat-btn:hover .flt-btn-slider, .flt-btn-wrap .sort-btn:hover .flt-btn-slider{
+    height: 15rem;
+}
+
+
+@media (max-width: 768px) {
+    .filter-title{
+        font-size: 22px;
+    }
+    .filter-ele{
+        font-size: 18px;
+    }
+}
+@media (min-width: 426px) {
+    .flt-btn-wrap{
+        display: none;
+    }
+}
+@media (max-width: 425px){
+    .flt-sticky-container{
+        display: none;
+    }
+    .filter-wrap{
+        min-height: fit-content;
+        width: 100vw;
+        flex: 0;
+    }
+}

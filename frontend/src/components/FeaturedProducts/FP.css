@@ -48,11 +48,11 @@
         padding: 1rem 1rem 0rem 1rem;
     }
     .feat-prod-items .prod-wrap .product-name{
-        width: 55%;
-        font-size: 16px;
+        width: 75%;
+        font-size: 12px;
     }
     .feat-prod-items .prod-wrap .product-price{
-        width: 45%;
-        font-size: 16px;
+        width: 25%;
+        font-size: 12px;
     }
 }

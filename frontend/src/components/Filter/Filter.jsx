@@ -18,7 +18,6 @@ const sortBy = [
 ];
 
 const Filter = ({ setFilter, setSort }) => {
-
   return (
     <div className="filter-wrap">
       <div className="flt-sticky-container">
@@ -46,6 +45,42 @@ const Filter = ({ setFilter, setSort }) => {
             </li>
           ))}
         </ul>
+      </div>
+
+      {/* filter buttom for 425px */}
+      <div className="flt-btn-wrap">
+        <div className="cat-btn">
+          <div className="flt-btn-title">Categories</div>
+          <div className="flt-btn-slider">
+            <ul className="filter">
+              {categories.map((category) => (
+                <li
+                  key={category.value}
+                  className="filter-ele"
+                  onClick={() => setFilter(category.value)}
+                >
+                  {category.label}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="sort-btn">
+          <div className="flt-btn-title">Sort By</div>
+          <div className="flt-btn-slider">
+            <ul className="filter">
+              {sortBy.map((category) => (
+                <li
+                  key={category.value}
+                  className="filter-ele"
+                  onClick={() => setSort(category.value)}
+                >
+                  {category.label}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
