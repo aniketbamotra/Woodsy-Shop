@@ -44,6 +44,12 @@
     height: fit-content;
     line-height: 36px;
 }
+.shop-link{
+    width: 50%;
+}
+.shop-link button{
+    width: 96% !important;
+}
 
 @media (max-width: 1220px) {
     .contact, .shipping, .shipping-method{

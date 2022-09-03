@@ -49,15 +49,6 @@ const Home = () => {
           </li>
         </ul>
       </div>
-      <div className="featured-products">
-        <h4 className="sect-title">Buy our featured products</h4>
-        <div className="feat-prod-wrap">
-          <FeaturedProduct />
-        </div>
-        <Link to="/products" className="show-link">
-          Shop All
-        </Link>
-      </div>
       <div className="spotlight">
         <div className="spotlight-text">
           <h4 className="sect-title">Indian Wooden Elephant</h4>
@@ -74,6 +65,15 @@ const Home = () => {
           </Link>
         </div>
         <img src={require("../../asserts/media/spotlight.png")} alt="" />
+      </div>
+      <div className="featured-products">
+        <h4 className="sect-title">Buy our featured products</h4>
+        <div className="feat-prod-wrap">
+          <FeaturedProduct />
+        </div>
+        <Link to="/products" className="show-link">
+          Shop All
+        </Link>
       </div>
       <TopPicks />
       <Footer />

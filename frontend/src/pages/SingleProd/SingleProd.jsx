@@ -36,11 +36,14 @@ const SingleProd = () => {
 
   return (
     <div>
-      <p className="bread-crum-container">Home/Shop/Category/Product1</p>
+      <p className="bread-crum-container">Home/Shop/Product{product._id}</p>
       <div className="prod-wraper">
         <div className="imgs-container">
           {product.image && <img src={product.image} />}
-          <img
+          {product.image && <img src={product.image2} />}
+          {product.image && <img src={product.image3} />}
+          {product.image && <img src={product.image4} />}
+          {/* <img
             src={require("../../asserts/media/scatered-img (2).jpg")}
             alt=""
           />
@@ -51,7 +54,7 @@ const SingleProd = () => {
           <img
             src={require("../../asserts/media/scatered-img (4).jpg")}
             alt=""
-          />
+          /> */}
         </div>
 
         <div className="prod-text-area">

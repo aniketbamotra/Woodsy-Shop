@@ -87,7 +87,7 @@ export default class CheckoutForm extends React.Component {
 
   render() {
     return (
-      <div className="checkout-wrap">
+      <div>
         <form className="forms" onSubmit={this.handleSubmit}>
           <div className="contact">
             <h4 className="form-title">Contact Information</h4>
@@ -187,7 +187,7 @@ export default class CheckoutForm extends React.Component {
             </div>
           </div>
           <div className="cart-btn-container">
-            <Link to="/products">
+            <Link to="/products" className="shop-link">
               <button className="shoping">Continue Shoping</button>
             </Link>
             <button className="ctc" type="submit">
