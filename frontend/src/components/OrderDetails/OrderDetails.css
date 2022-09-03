@@ -78,3 +78,28 @@
     font-weight: normal;
     font-size: 22px;
 }
+
+
+@media (max-width: 1220px){
+    .order-wrap{
+        padding: 2rem 1rem 2rem 1rem;
+        transform: translateX(-1.5rem);
+    }
+}
+@media (max-width: 1024px) {
+    .order-wrap{
+        transform: translateX(-5.5rem);
+    }
+}
+@media (max-width: 768px) {
+    .order-wrap{
+        transform: translateX(-7.5rem);
+    }
+    .order-item img{
+        width: 130px;
+        height: 130px;
+    }
+    .order-item-name, .order-item-price, .qnty-text, .qnty-no, .order-price-text{
+        font-size: 16px;
+    }
+}

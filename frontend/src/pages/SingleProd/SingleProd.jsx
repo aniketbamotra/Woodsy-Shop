@@ -7,6 +7,9 @@ import { useLocation } from "react-router-dom";
 import { publicRequest } from "../../requestMethod";
 import axios from "axios";
 import CartContext from "../../context/cart-context";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Scrollbar } from "swiper";
+import "swiper/css";
 
 const SingleProd = () => {
   const location = useLocation();
@@ -50,6 +53,7 @@ const SingleProd = () => {
             alt=""
           />
         </div>
+
         <div className="prod-text-area">
           <h4 className="single-prod-name">{product.name}</h4>
           <h4 className="single-prod-price">${product.price}</h4>

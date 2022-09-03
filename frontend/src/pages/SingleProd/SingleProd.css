@@ -96,8 +96,8 @@
     background-image: url(../../asserts/media/spotlight-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 49.5vw;
-    height: 49.5vw;
+    width: 50vw;
+    height: 100vh;
     display: grid;
     place-content: center;
 }
@@ -112,7 +112,99 @@
 
 @media (max-width: 1440px) {
     .imgs-container img{
-        width: 728px;
-        height: 728px;
+        width: 48vw;
+        height: 48vw;
     }
+}
+@media (max-width: 1024px) {
+    .bread-crum-container{
+        padding-left: 1rem;
+        font-size: 12px;
+    }
+    .single-prod-name, .single-prod-price{
+        font-size: 30px;
+    }
+    .prod-descp{
+        font-size: 18px;
+    }
+    .prod-text-area .atc-btn{
+        margin: 2rem 2rem;
+    }
+    .prod-details .detail-title{
+        margin-left: 3rem;
+    }
+    .prod-details .intro-para{
+        font-size: 16px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .prod-descp-img img{
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media (max-width: 768px) {
+    .single-prod-name, .single-prod-price{
+        font-size: 24px;
+        margin: 7rem 2rem 0rem 2rem;
+    }
+    .prod-descp{
+        font-size: 16px;
+        margin-left: 2rem;
+    }
+    .prod-text-area .atc-btn{
+        margin: 2rem 1rem;
+        font-size: 16px;
+    }
+}
+@media (max-width: 425px) {
+    .prod-wraper{
+        flex-direction: column;
+    }
+    .imgs-container{
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 1rem;
+        scroll-behavior: smooth;
+    }
+    .prod-wraper img{
+        width: 92vw;
+        height: 92vw;
+    }
+    .prod-text-area{
+        align-self: auto;
+        padding-bottom: 5rem;
+    }
+    .single-prod-name, .single-prod-price{
+        margin-top: 1rem;
+    }
+    .detail-text{
+        width: 100vw;
+        height: 100vh;
+    }
+    .detail-text h4, .detail-text p{
+        margin-top: 20rem;
+        margin-left: 1rem;
+    }
+    .detail-text .detail-title{
+        margin-left: 1rem;
+    }
+    .detail-text .intro-para{
+        padding-left: 1rem;
+    }
+    .prod-descp-img{
+        position: absolute;
+        width: 100vw;
+        height: fit-content;
+        background: transparent;
+        place-content: flex-start;
+    }
+    .prod-descp-img img{
+        width: 90vw;
+        height: 90vw;
+        margin: 4rem 0rem 0rem 1rem;
+    }
+
+
 }

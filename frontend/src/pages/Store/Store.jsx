@@ -18,7 +18,7 @@ const Store = () => {
       <h1 className="page-title">Store</h1>
       <div className="search-wrap">
         <p className="total-prod-no">{prod} Products</p>
-        <input type="text" placeholder="Search" className="search-container" />
+        {/* <input type="text" placeholder="Search" className="search-container" /> */}
       </div>
       <div className="store-body">
         <Filter setFilter={setFilter} setSort={setSort} />

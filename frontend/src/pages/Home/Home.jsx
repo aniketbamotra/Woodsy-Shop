@@ -47,18 +47,6 @@ const Home = () => {
               alt=""
             />
           </li>
-          <li className="scatered-img" id="sct-img3">
-            <img
-              src={require("../../asserts/media/scatered-img (3).jpg")}
-              alt=""
-            />
-          </li>
-          <li className="scatered-img" id="sct-img4">
-            <img
-              src={require("../../asserts/media/scatered-img (4).jpg")}
-              alt=""
-            />
-          </li>
         </ul>
       </div>
       <div className="featured-products">

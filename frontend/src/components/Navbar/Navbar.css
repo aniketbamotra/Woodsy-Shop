@@ -43,6 +43,10 @@
     top: 0rem;
     right: .5rem;
 }
+.cart-icon-container svg{
+    width: 34px;
+    height: 39px;
+}
 .cart-icon-container-trans{
     cursor: pointer;
     margin: 1rem 1rem;

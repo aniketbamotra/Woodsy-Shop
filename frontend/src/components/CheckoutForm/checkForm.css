@@ -44,3 +44,24 @@
     height: fit-content;
     line-height: 36px;
 }
+
+@media (max-width: 1220px) {
+    .contact, .shipping, .shipping-method{
+        padding: 3rem 3rem;
+    }
+}
+@media (max-width: 768px) {
+    .contact, .shipping, .shipping-method{
+        padding: 3rem 1rem;
+    }
+    .contact input, .shipping input, .radio-wrap{
+        width: 65%;
+        font-size: 16px;
+    }
+    .form-title{
+        font-size: 20px;
+    }
+    .forms .cart-btn-container{
+        padding: 0rem 1rem;
+    }
+}

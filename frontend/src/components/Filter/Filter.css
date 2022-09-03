@@ -1,6 +1,7 @@
 .filter-wrap{
     position: relative;
     width: 338px;
+    min-width: 250px;
     min-height: 100vh;
     border-bottom: 1px solid;
     flex: 1;

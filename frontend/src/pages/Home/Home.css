@@ -285,6 +285,107 @@
         top: 10rem;
     }
 }
+@media (max-height: 1024px), (max-width: 1440px) {
+    #sct-img3 img{
+        top: 8rem;
+        left: 12rem;
+    }
+    #sct-img4 img{
+        top: -7rem;
+    }
+}
+@media (max-height: 920px), (min-width: 1024px) {
+    #sct-img3 img{
+        top: 5rem;
+        left: 12rem;
+    }
+    #sct-img4 img{
+        top: -12rem;
+    }
+}
+@media (max-width: 768px), (max-height: 920px){
+    #sct-img3 img{
+        top: 5rem;
+        left: 3rem;
+    }
+    #sct-img4 img{
+        top: -12rem;
+    }
+}
+@media (max-height: 840px), (min-width: 1024px) {
+    #sct-img3 img{
+        top: 2rem;
+        left: 12rem;
+    }
+    #sct-img4 img{
+        top: -15rem;
+    }
+}
+@media (max-height: 840px), (max-width: 768px) {
+    #sct-img3 img{
+        top: 2rem;
+        left: 3rem;
+    }
+    #sct-img4 img{
+        top: -15rem;
+    }
+}
+@media (max-height: 800px) {
+    #sct-img3 img{
+        width: 13rem;
+        height: 13rem;
+        top: -1rem;
+        left: 1rem;
+    }
+    #sct-img4 img{
+        top: -20rem;
+        height: 13rem;
+    }
+}
+@media (max-height: 800px), (max-width: 768px) {
+    #sct-img3 img{
+        width: 13rem;
+        height: 13rem;
+        top: -1rem;
+        left: 1rem;
+    }
+    #sct-img4 img{
+        top: -15rem;
+        height: 13rem;
+    }
+}
+@media screen and (max-width: 425px) , screen and (max-height: 800px){
+    #sct-img3 img{
+        top: 16rem;
+        left: 1rem;
+    }
+    #sct-img4 img{
+        top: 3rem;
+        height: 13rem;
+    }
+}
+@media (max-height: 760px), (max-width: 425px) {
+    #sct-img3 img{
+        top: 12rem;
+        left: 1rem;
+    }
+    #sct-img4 img{
+        top: -2rem;
+        height: 13rem;
+    }
+}
+@media (max-height: 700px) {
+    #sct-img3 img{
+        top: -7rem;
+        left: 1rem;
+    }
+}
+@media screen and (max-height: 700px), screen and (max-width: 425px) {
+    #sct-img3 img{
+        top: 10rem;
+        left: 1rem;
+    }
+}
 
 .featured-products{
     width: 100vw;

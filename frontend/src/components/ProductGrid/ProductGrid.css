@@ -32,6 +32,12 @@
         font-size: 22px;
     }
 }
+@media (max-width: 1366px) {
+    .grid-wrap a img{
+        width: 26rem;
+        height: 26rem;
+    }
+}
 @media (max-width: 1220px) {
     .grid-wrap .prod-wrap{
         padding: 1rem 1rem 0rem 1rem;

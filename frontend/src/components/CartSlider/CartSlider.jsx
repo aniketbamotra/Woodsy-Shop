@@ -29,40 +29,47 @@ const CartSlider = (props) => {
   // const priceRounded = Math.round((totalPlusTax + Number.EPSILON) * 100) / 100;
 
   return (
-    <div className={`cart ${props.isCartActive && "open-cart"}`}>
-      <p className="cart-sect-title">Order Summary</p>
-      <div className="cart-items-wrap">
-        {cartCtx.products.map((product) => (
-          <div key={product._id} className="cart-item">
-            <img src={product.image} alt={product.name} />
-            <h4 className="cart-item-name">{product.name}</h4>
-            <p className="cart-item-price">{"$" + product.price}</p>
-            <div className="qnty-btn">
-              <Remove
-                className="minus"
-                onClick={() => cartItemDecrease(product._id)}
+    <div
+      className={`cart-wrapper ${props.isCartActive && "cart-wrapper-open"}`}
+    >
+      <div className={`cart ${props.isCartActive && "open-cart"}`}>
+        <p className="cart-sect-title">Order Summary</p>
+        <div className="cart-items-wrap">
+          {cartCtx.products.map((product) => (
+            <div key={product._id} className="cart-item">
+              <img src={product.image} alt={product.name} />
+              <h4 className="cart-item-name">{product.name}</h4>
+              <p className="cart-item-price">{"$" + product.price}</p>
+              <div className="qnty-btn">
+                <Remove
+                  className="minus"
+                  onClick={() => cartItemDecrease(product._id)}
+                />
+                <p className="qnty-no">{product.amount}</p>
+                <Add
+                  className="plus"
+                  onClick={() => cartItemIncrease(product)}
+                />
+              </div>
+              <Close
+                className="dlt-item"
+                onClick={() => cartItemRemove(product._id)}
               />
-              <p className="qnty-no">{product.amount}</p>
-              <Add className="plus" onClick={() => cartItemIncrease(product)} />
             </div>
-            <Close
-              className="dlt-item"
-              onClick={() => cartItemRemove(product._id)}
-            />
-          </div>
-        ))}
+          ))}
 
-        <div className="cart-subtotal">
-          <p className="cart-sect-title">Sub-Total</p>
-          <p className="subtotal-price">{"$" + cartCtx.totalAmount}</p>
-        </div>
-        <div className="cart-btn-container">
-          <button className="shoping" onClick={props.toggleCart}>
-            Continue Shoping
-          </button>
-          <button className="ctc" onClick={redirectToCheckout}>
-            Checkout
-          </button>
+          <div className="cart-subtotal">
+            <p className="cart-sect-title">Sub-Total</p>
+            <p className="subtotal-price">{"$" + cartCtx.totalAmount}</p>
+          </div>
+          <div className="cart-btn-container">
+            <button className="shoping" onClick={props.toggleCart}>
+              Continue Shoping
+            </button>
+            <button className="ctc" onClick={redirectToCheckout}>
+              Checkout
+            </button>
+          </div>
         </div>
       </div>
     </div>
