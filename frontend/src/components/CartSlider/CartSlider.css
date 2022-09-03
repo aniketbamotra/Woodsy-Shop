@@ -95,8 +95,12 @@
     font-weight: normal;
     font-size: 18px;
 }
+.cart-btn-container{
+    width: 100%;
+    display: flex;
+}
 .shoping, .ctc{
-    width: 47%;
+    width: 50%;
     font-family: var(--sans);
     font-style: normal;
     font-weight: normal;
@@ -104,7 +108,7 @@
     height: 2rem;
     border: 1px solid;
     border-radius: 6px;
-    margin: 1rem 0rem;
+    margin: 1rem 1rem;
 }
 .shoping{
     background-color: transparent;
@@ -150,5 +154,14 @@
     }
     .open-cart{
         transform: translateX(0vw);
+    }
+    .cart-sect-title{
+        font-size: 16px;
+    }
+    .cart-item-name{
+        font-size: 12px;
+    }
+    .cart-item-price{
+        font-size: 12px;
     }
 }
