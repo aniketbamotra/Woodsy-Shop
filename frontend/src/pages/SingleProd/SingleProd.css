@@ -1,6 +1,29 @@
 .prod-wraper{
     display: flex;
 }
+.noti-popup{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.52);
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+.noti-text{
+    font-family: var(--sans);
+    text-align: center;
+    position: relative;
+    top: 5.75em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1em 2em;
+    background-color: rgb(var(--accent-color));
+    width: fit-content;
+    color: rgb(var(--light-color));
+}
+.noti-closed{
+    display: none;
+}
 .bread-crum-container{
     border-bottom: 1px solid;
     padding: 1rem 5rem 1rem 5rem;
@@ -9,6 +32,7 @@
     font-weight: normal;
     color: var(--dark-color);
 }
+
 .imgs-container{
     flex: 1;
     display: flex;
@@ -51,6 +75,7 @@
     line-height: 20px;
 }
 .atc-btn{
+    cursor: pointer;
     width: 90%;
     height: 45px;
     background-color: rgb(var(--accent-color));

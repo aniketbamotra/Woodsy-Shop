@@ -16,6 +16,7 @@ const SingleProd = () => {
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
   const cartCtx = useContext(CartContext);
+  const [noti, setNoti] = useState(false);
 
   useEffect(() => {
     const getProduct = async () => {
@@ -32,10 +33,20 @@ const SingleProd = () => {
 
   const addToCartHandler = () => {
     cartCtx.addProduct({ ...product, amount: 1 });
+    setNoti(true);
+  };
+  const closeNoti = () => {
+    setNoti(false);
   };
 
   return (
     <div>
+      <div
+        className={`noti-popup ${!noti && "noti-closed"}`}
+        onClick={closeNoti}
+      >
+        <h4 className="noti-text">Added to cart!</h4>
+      </div>
       <p className="bread-crum-container">Home/Shop/Product{product._id}</p>
       <div className="prod-wraper">
         <div className="imgs-container">
