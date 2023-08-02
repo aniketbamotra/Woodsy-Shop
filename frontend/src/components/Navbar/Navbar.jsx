@@ -135,7 +135,7 @@ const Navbar = () => {
           <div className="menu-logo-wrap">
             <img src={openMenuLogo} className="menu-logo-container"></img>
             <h4 className="menu-logo-title">The Woodsy Shop</h4>
-            <a
+            {/* <a
               href="https://www.facebook.com/"
               target="_blank"
               id="menu-social-logo1"
@@ -201,7 +201,7 @@ const Navbar = () => {
                 <path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" />
                 <circle cx="12" cy="12" r="9" />
               </svg>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

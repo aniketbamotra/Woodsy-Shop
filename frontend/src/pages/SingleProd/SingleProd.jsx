@@ -10,6 +10,8 @@ import CartContext from "../../context/cart-context";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper";
 import "swiper/css";
+import prodData from "../../products.json";
+import Product from "../../components/Product/Product";
 
 const SingleProd = () => {
   const location = useLocation();
@@ -18,18 +20,34 @@ const SingleProd = () => {
   const cartCtx = useContext(CartContext);
   const [noti, setNoti] = useState(false);
 
-  useEffect(() => {
-    const getProduct = async () => {
-      try {
-        const res = await publicRequest.get(
-          "https://managedatabase.woodsyshoppe.com/api/products/" + id
-        );
-        setProduct(res.data);
-        console.log(res);
-      } catch (error) {}
-    };
-    getProduct();
-  }, [id]);
+
+  
+    let ProductArray = [
+        {"id": "1", "name":"Product 1", "desc": "This is a really nice product.", "price": "23", "img1": "src/asserts/media/scatered-img (1).jpg", "img2": "", "img3": "", "img4": ""},
+        {"id": "2", "name":"Product 2", "desc": "This is a really nice product.", "price": "45", "img1": "", "img2": "", "img3": "", "img4": ""},
+        {"id": "3", "name":"Product 3", "desc": "This is a really nice product.", "price": "56", "img1": "", "img2": "", "img3": "", "img4": ""},
+        {"id": "4", "name":"Product 4", "desc": "This is a really nice product.", "price": "99", "img1": "", "img2": "", "img3": "", "img4": ""},
+        {"id": "5", "name":"Product 5", "desc": "This is a really nice product.", "price": "21", "img1": "", "img2": "", "img3": "", "img4": ""},
+        {"id": "6", "name":"Product 6", "desc": "This is a really nice product.", "price": "43", "img1": "", "img2": "", "img3": "", "img4": ""} 
+    ]
+
+
+
+
+  // useEffect(() => {
+  //   const getProduct = async () => {
+  //     try {
+  //       // const res = await publicRequest.get(
+  //       //   "https://managedatabase.woodsyshoppe.com/api/products/" + id
+  //       // );
+
+  //       setProduct(prodData.products);
+  //       console.log(prodData.products);
+  //     } catch (error) {}
+  //   };
+  //   getProduct();
+  // }, []);
+
 
   const addToCartHandler = () => {
     cartCtx.addProduct({ ...product, amount: 1 });
@@ -47,14 +65,14 @@ const SingleProd = () => {
       >
         <h4 className="noti-text">Added to cart!</h4>
       </div>
-      <p className="bread-crum-container">Home/Shop/Product{product._id}</p>
+      <p className="bread-crum-container">Home/Shop/Product {id}</p>
       <div className="prod-wraper">
         <div className="imgs-container">
-          {product.image && <img src={product.image} />}
+          {/* {product.image && <img src={product.image} />}
           {product.image && <img src={product.image2} />}
           {product.image && <img src={product.image3} />}
-          {product.image && <img src={product.image4} />}
-          {/* <img
+          {product.image && <img src={product.image4} />} */}
+          <img
             src={require("../../asserts/media/scatered-img (2).jpg")}
             alt=""
           />
@@ -65,14 +83,14 @@ const SingleProd = () => {
           <img
             src={require("../../asserts/media/scatered-img (4).jpg")}
             alt=""
-          /> */}
+          />
         </div>
 
         <div className="prod-text-area">
-          <h4 className="single-prod-name">{product.name}</h4>
-          <h4 className="single-prod-price">${product.price}</h4>
+          <h4 className="single-prod-name">{ProductArray[id].name}</h4>
+          <h4 className="single-prod-price">${ProductArray[id].price}</h4>
           <p className="prod-id"></p>
-          <p className="prod-descp">{product.description}</p>
+          <p className="prod-descp">{ProductArray[id].desc}</p>
           <button className="atc-btn" onClick={addToCartHandler}>
             Add to bag
           </button>

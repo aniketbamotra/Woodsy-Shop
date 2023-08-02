@@ -1,0 +1,10 @@
+{
+    "products" : [
+        {"id": "1", "name":"Product 1", "desc": "This is a really nice product.", "price": "23", "img1": "src/asserts/media/scatered-img (1).jpg", "img2": "", "img3": "", "img4": ""},
+        {"id": "2", "name":"Product 3", "desc": "This is a really nice product.", "price": "45", "img1": "", "img2": "", "img3": "", "img4": ""},
+        {"id": "3", "name":"Product 4", "desc": "This is a really nice product.", "price": "56", "img1": "", "img2": "", "img3": "", "img4": ""},
+        {"id": "4", "name":"Product 2", "desc": "This is a really nice product.", "price": "99", "img1": "", "img2": "", "img3": "", "img4": ""},
+        {"id": "5", "name":"Product 5", "desc": "This is a really nice product.", "price": "21", "img1": "", "img2": "", "img3": "", "img4": ""},
+        {"id": "6", "name":"Product 6", "desc": "This is a really nice product.", "price": "43", "img1": "", "img2": "", "img3": "", "img4": ""} 
+    ]
+}

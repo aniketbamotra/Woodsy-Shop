@@ -4,6 +4,7 @@ import "./ProductGrid.css";
 import { AllProd } from "../../products";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import prodData from "../../products.json";
 
 const ProductGrid = ({ filter, sort, getProd }) => {
   const [products, setProducts] = useState([]);
@@ -12,14 +13,16 @@ const ProductGrid = ({ filter, sort, getProd }) => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(
-          "https://managedatabase.woodsyshoppe.com/api/products"
-        );
-        setProducts(res.data);
-        console.log(res);
+        // const res = await axios.get(
+        //   "https://managedatabase.woodsyshoppe.com/api/products"
+        // );
+
+        setProducts(prodData.products);
+        console.log(prodData.products);
       } catch (err) {}
     };
     getProducts();
+    console.log(products);
   }, []);
 
   useEffect(() => {
@@ -66,7 +69,7 @@ const ProductGrid = ({ filter, sort, getProd }) => {
   return (
     <div className="grid-wrap">
       {filteredProducts.map((product) => (
-        <Link key={product._id} to={`/product/${product._id}`}>
+        <Link key={product.id} to={`/product/${product.id}`}>
           <Product product={product} />
         </Link>
       ))}
