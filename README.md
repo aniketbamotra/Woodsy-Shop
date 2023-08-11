@@ -1,6 +1,7 @@
-# Woodsy Shop - Pixel Perfect E-commerce Website
+# Woodsy Shop - E-commerce Website
 
-![Woodsy Shop](banner.jpg)
+![Woodsy Shop](https://github.com/aniketbamotra/Woodsy-Shop/assets/77141071/a20cd473-42c8-44b6-a2f1-cd8942ae6ecb)
+
 
 Woodsy Shop is a meticulously designed e-commerce website that showcases the skills of a UX engineer in creating a pixel-perfect web experience. Crafted from a Figma template, this project demonstrates the seamless integration of frontend and backend technologies. The frontend is developed using create-react-app, while the backend is powered by Django.
 
